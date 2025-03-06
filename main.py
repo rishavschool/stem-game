@@ -115,7 +115,7 @@ def start_game():
   global user
   clear_terminal()
   print("Welcome to the Scum of Stem game.\n")
-  name = input("Enter your first name:\n")
+  name = input("Enter your first name:\n").capitalize()
   family = input("Select a family (Potdar, Unc, Ravikanth):\n").lower()
   user = get_family_class(family)(name)
 
@@ -136,10 +136,10 @@ def frame():
   elif choice == "Inventory":
     inventory_options()
   else: #unavailable choice so we re render
-    frame()
+    return frame()
 
   if dead == False: 
-    frame()
+    return frame()
 
 start_game()
 frame()

@@ -23,17 +23,20 @@ class Family():
     self.score = 0
     self.defects = []
     self.buffs = []
+    self.abilities = {
+      f"punch": 10
+    }
   
   @staticmethod
   def init_inventory(self):
     self.inventory = {
-      "mayo": 0,
+      "mayo": 1,
       "sugar": 1,
-      "sweetener": 0,
+      "sweetener": 1,
       "chips": 0,
-      "soda": 2,
+      "soda": 100,
       "polyester scraps": 0,
-      "youngla jeans": 1,
+      "youngla jeans": 0,
       "monacle": 0,
       "ruff": 0,
       "sigma shirt": 0,
@@ -73,9 +76,10 @@ class Family():
   def give_xp(self, amount):
     self.xp += amount
     
-    while self.xp >= get_xp_for_level(self):
-      self.xp -= get_xp_for_level(self)
+    while self.xp >= self.get_xp_for_level():
+      self.xp -= self.get_xp_for_level()
       self.level += 1
+      self.max_health = math.floor(100 * ((self.level / 5) + 1))
 
   def get_xp_for_level(self):
     return 2 * self.level ** 2 + 50 * self.level + 48
@@ -136,6 +140,7 @@ class Ravikanth(Family):
     self.age: int = 16
     self.defects = ["Scoliosis"]
     self.buffs = ["None"]
+    self.abilities.update({"serve": 20})
     super().init_inventory(self)
 
 class Unc(Family):
@@ -145,6 +150,7 @@ class Unc(Family):
     self.age: int = math.inf
     self.defects = ["Dementia"]
     self.buffs = ["Karate"]
+    self.abilities.update({"kick": 30})
     super().init_inventory(self)
 
 class Potdar(Family):
@@ -154,4 +160,5 @@ class Potdar(Family):
     self.age: int = 15
     self.defects = ["Hair"]
     self.buffs = ["Badminton"]
+    self.abilities.update({"hrishimang hit": 20})
     super().init_inventory(self)
