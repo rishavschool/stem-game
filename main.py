@@ -33,7 +33,7 @@ def activate_location_defects():
 
   #dementia means 40% of your actions won't go through because you forget
   if "Dementia" in user.defects:
-    if chance(40):
+    if chance(25):
       clear_terminal()
       print("You forgot what you are doing because you have dementia")
       location = old_location
@@ -62,9 +62,15 @@ def inventory_options():
   #check which items are owned by user and store in overlap array
   overlap = [key.capitalize() for key in user.inventory.keys() if key in equippables[category] and user.inventory[key] != 0]
   overlap.append("None")
-  new_equip = select_from_choices(overlap).lower()
+  new_equip = select_from_choices(overlap)
+
+  if isinstance(new_equip, str):
+    new_equip = new_equip.lower()
 
   currently_equipped = user.equipped[category]
+
+  if new_equip is None:
+    return
 
   #remove the current boost
   if currently_equipped != "none":
@@ -73,9 +79,6 @@ def inventory_options():
 
     current_boost_attribute = getattr(user, current_boost_category)
     setattr(user, current_boost_category, current_boost_attribute - current_boost)
-
-  if new_equip is None:
-    return
 
    #add new boost
   if new_equip != "none":

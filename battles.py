@@ -4,6 +4,7 @@ import re
 import math
 from colors import TerminalColors
 from throwables import throwables, throwable_colors
+from abilities import ability_colors
 from helper import clear_terminal, select_from_choices
 
 battle_text = f"""{TerminalColors.BOLD} _____                                                                _____ 
@@ -89,7 +90,27 @@ def items_action(user, enemy):
     return item
 
 def abilities_action(user, enemy):
-  pass
+  clear_terminal()
+  print("Abilities:")
+  abilities = []
+
+  for ability in user.abilities.keys():
+    abilities.append(f"{ability_colors[ability] if ability_colors.get(ability) else TerminalColors.WHITE}{ability.title()}{TerminalColors.RESET}: Damage: {get_ability_damage(user.abilities[ability], user.strength, enemy.charisma)}")
+  abilities.append("Back")
+
+  choice = select_from_choices(abilities)
+
+  if choice == "Back" or choice is None:
+    return "Back"
+  else:
+    clean_text = re.sub(r'\033\[[0-9;]*m', '', choice)
+    ability = re.match(r"^(.*?)(?=:)", clean_text)
+    ability = ability.group(1).strip().lower()
+
+    clear_terminal()
+    print(f"You used {ability_colors[ability] if ability_colors.get(ability) else TerminalColors.WHITE}{ability.title()}{TerminalColors.RESET} and dealt {get_ability_damage(user.abilities[ability], user.strength, enemy.charisma)} damage!")
+
+    return ability
 
 #repeats until a valid action is selected
 def action(*args):

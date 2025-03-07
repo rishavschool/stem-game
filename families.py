@@ -30,13 +30,13 @@ class Family():
   @staticmethod
   def init_inventory(self):
     self.inventory = {
-      "mayo": 1,
-      "sugar": 1,
-      "sweetener": 1,
+      "mayo": 0,
+      "sugar": 0,
+      "sweetener": 0,
       "chips": 0,
-      "soda": 100,
+      "soda": 0,
       "polyester scraps": 0,
-      "youngla jeans": 0,
+      "youngla jeans": 1,
       "monacle": 0,
       "ruff": 0,
       "sigma shirt": 0,

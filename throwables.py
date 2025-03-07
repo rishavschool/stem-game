@@ -5,7 +5,7 @@ throwables = {
   "mayo": 15,
   "sugar": 5,
   "sweetener": 10,
-  "soda": 1000
+  "soda": 25
 }
 
 throwable_colors = {

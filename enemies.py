@@ -25,3 +25,17 @@ class Unc(Enemy):
       f"{TerminalColors.RED}Diablo{TerminalColors.RESET}": 15,
       f"{TerminalColors.PINK}Liver Shot{TerminalColors.RESET}": 25
     }
+
+class Freddy(Enemy):
+  def __init__(self):
+    super().__init__()
+    self.name = "Sir Frederick Digby"
+    self.max_health = 100
+    self.strength = 25
+    self.charisma = 50
+    self.xp = 50
+    self.abilities = {
+      f"{TerminalColors.BRIGHT_YELLOW}5th Symphony{TerminalColors.RESET}": 7,
+      f"{TerminalColors.BRIGHT_WHITE}Abraham{TerminalColors.RESET}": 10,
+      f"{TerminalColors.RED}Revolution{TerminalColors.RESET}": 12,
+    }
