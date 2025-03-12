@@ -40,6 +40,7 @@ class Family():
       "monacle": 0,
       "ruff": 0,
       "sigma shirt": 0,
+      "gravel": 0
     }
     self.equipped = {
       "shoes": "none",

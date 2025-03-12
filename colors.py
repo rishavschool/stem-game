@@ -16,6 +16,7 @@ class TerminalColors:
   PURPLE = '\033[38;5;141m'  
   LIGHT_BLUE = '\033[38;5;81m' 
   LIGHT_CYAN = '\033[38;5;159m' 
+  LIGHT_GRAY = '\033[37m'
   TEAL = '\033[38;5;30m'  
   BROWN = '\033[38;5;130m'
 

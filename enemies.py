@@ -53,3 +53,16 @@ class Rishi(Enemy):
       f"{TerminalColors.YELLOW}Rotten Banana{TerminalColors.RESET}": 7,
       f"{TerminalColors.CYAN}Versace Eros{TerminalColors.RESET}": 10
     }
+
+class JJ(Enemy):
+  def __init__(self):
+    super().__init__()
+    self.name = "JJ"
+    self.max_health = 100
+    self.strength = 10
+    self.charisma = 25
+    self.xp = 50
+    self.abilities = {
+      f"{TerminalColors.LIGHT_GRAY}Gravel{TerminalColors.RESET}": 10,
+      f"{TerminalColors.TEAL}Espanol{TerminalColors.RESET}": 12,
+    }
