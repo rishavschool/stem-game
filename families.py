@@ -36,7 +36,7 @@ class Family():
       "chips": 0,
       "soda": 0,
       "polyester scraps": 0,
-      "youngla jeans": 1,
+      "youngla jeans": 0,
       "monacle": 0,
       "ruff": 0,
       "sigma shirt": 0,

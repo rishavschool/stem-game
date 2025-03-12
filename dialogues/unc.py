@@ -3,6 +3,7 @@ from colors import TerminalColors
 #potdar family dialogue
 unc_dialogue_potdar = {
   "dialogue": "Hey why are you in my hut, bastard?",
+  "audio": "inmyhut.mp3",
   "responses": {
     f"I was looking for {TerminalColors.YELLOW}Delilah{TerminalColors.RESET}": {
       "dialogue": f"{TerminalColors.YELLOW}Delilah{TerminalColors.RESET} is my wife, I am also looking for her!",
@@ -14,6 +15,7 @@ unc_dialogue_potdar = {
 
         f"{TerminalColors.YELLOW}Delilah{TerminalColors.RESET} is top 10 great guys in the world": {
           "dialogue": "Thank you, great guy.",
+          "audio": "thankyougreatguy.mp3",
           "responses": "END2"
         }
       }
@@ -21,6 +23,7 @@ unc_dialogue_potdar = {
 
     "I got lost, sorry unc": {
       "dialogue": "Ohh.... where's shreyan when you need him, say you kind of look like shreyan.",
+      "audio": "wheresshreyanwhenu.mp3",
       "responses": {
         "Thats because shreyan is my deep cousin, I'm a great relative of his.": {
           "dialogue": "Ohhh shreyann.... ohhhh mangesh...",

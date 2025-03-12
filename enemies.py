@@ -39,3 +39,17 @@ class Freddy(Enemy):
       f"{TerminalColors.BRIGHT_WHITE}Abraham{TerminalColors.RESET}": 10,
       f"{TerminalColors.RED}Revolution{TerminalColors.RESET}": 12,
     }
+
+class Rishi(Enemy):
+  def __init__(self):
+    super().__init__()
+    self.name = "Rishi"
+    self.max_health = 50
+    self.strength = 25
+    self.charisma = 0
+    self.xp = 25
+    self.abilities = {
+      f"{TerminalColors.BROWN}Stench{TerminalColors.RESET}": 5,
+      f"{TerminalColors.YELLOW}Rotten Banana{TerminalColors.RESET}": 7,
+      f"{TerminalColors.CYAN}Versace Eros{TerminalColors.RESET}": 10
+    }
