@@ -40,6 +40,7 @@ class Family():
       "monacle": 0,
       "ruff": 0,
       "sigma shirt": 0,
+      "tight ahh joggers": 0,
       "gravel": 0
     }
     self.equipped = {
@@ -161,5 +162,5 @@ class Potdar(Family):
     self.age: int = 15
     self.defects = ["Hair"]
     self.buffs = ["Badminton"]
-    self.abilities.update({"hrishimang hit": 20})
+    self.abilities.update({"mangesh": 20})
     super().init_inventory(self)

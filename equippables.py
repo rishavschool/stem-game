@@ -3,7 +3,8 @@ equippables = {
 
   ],
   "pants": [
-    "youngla jeans"
+    "youngla jeans",
+    "tight ahh joggers"
   ],
   "shirt": [
     "ruff",

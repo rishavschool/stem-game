@@ -66,3 +66,17 @@ class JJ(Enemy):
       f"{TerminalColors.LIGHT_GRAY}Gravel{TerminalColors.RESET}": 10,
       f"{TerminalColors.TEAL}Espanol{TerminalColors.RESET}": 12,
     }
+
+class TPod(Enemy):
+  def __init__(self):
+    super().__init__()
+    self.name = "TPod"
+    self.max_health = 300
+    self.strength = 0
+    self.charisma = 0
+    self.xp = 200
+    self.abilities = {
+      f"{TerminalColors.LIGHT_BLUE}No Mezz{TerminalColors.RESET}": 15,
+      f"{TerminalColors.RED}DelCo{TerminalColors.RESET}": 20,
+      f"{TerminalColors.PINK}Smiley{TerminalColors.RESET}": 45
+    }

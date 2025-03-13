@@ -7,6 +7,7 @@ from helper import *
 from equippables import *
 from item_stats import item_stats
 from colors import TerminalColors
+from name_hooks import name_hooks
 
 user = None
 old_location = None
@@ -121,6 +122,10 @@ def start_game():
   name = input("Enter your first name:\n").capitalize()
   family = input("Select a family (Potdar, Unc, Ravikanth):\n").lower()
   user = get_family_class(family)(name)
+
+  if name_hooks.get(name):
+    name_hooks[name](user)
+
 
 def frame():
   clear_terminal()
