@@ -2,6 +2,11 @@ import random
 import math
 import os
 
+def sign_as_string(number):
+  if number >= 0:
+    return "+"
+  else:
+    return "-"
 
 def random_between(lower: int, higher: int):
   return math.floor(random.random() * higher + lower)

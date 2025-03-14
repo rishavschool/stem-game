@@ -40,6 +40,7 @@ class Family():
       "tight ahh joggers": 0,
       "gravel": 0,
       "scum spray": 0,
+      "diablo sauce": 20,
     }
     self.equipped = {
       "shoes": "none",

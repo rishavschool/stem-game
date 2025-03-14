@@ -6,6 +6,7 @@ throwables = {
   "sweetener": 10,
   "soda": 25,
   "scum spray": 20,
+  "diablo sauce": 30,
 }
 
 throwable_colors = {
@@ -13,4 +14,5 @@ throwable_colors = {
   "sweetener": TerminalColors.CYAN,
   "mayo": TerminalColors.YELLOW,
   "scum spray": TerminalColors.BROWN,
+  "diablo sauce": TerminalColors.RED,
 }

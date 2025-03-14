@@ -5,7 +5,7 @@ import math
 from colors import TerminalColors
 from throwables import throwables, throwable_colors
 from abilities import ability_colors
-from helper import clear_terminal, select_from_choices
+from helper import clear_terminal, select_from_choices, sign_as_string
 
 battle_text = f"""{TerminalColors.BOLD} _____                                                                _____ 
 ( ___ )--------------------------------------------------------------( ___ )
@@ -173,8 +173,15 @@ def battle_loop(user, enemy, user_health, enemy_health):
     clear_terminal()
     print(won_text)
     print("\nRewards:")
+    print(f"{sign_as_string(enemy.money)}{TerminalColors.GREEN}${abs(enemy.money)}{TerminalColors.RESET}")
     print(f"+{enemy.xp} {TerminalColors.BLUE}XP{TerminalColors.RESET}")
     user.give_xp(enemy.xp)
+    user.money += enemy.money
+    drops = enemy.get_drops()
+    for item in drops:
+      user.inventory[item] += 1
+      print(f"+1 {item.capitalize()}")
+
     print("\nChoices:")
     choice = select_from_choices(["Continue"])
     return 
