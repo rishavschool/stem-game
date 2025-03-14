@@ -4,9 +4,6 @@ from item_stats import item_stats
 from throwables import throwables
 from colors import TerminalColors
 
-def center_text(text):
-  terminal_width = os.get_terminal_size().columns
-  return text.center(terminal_width)
 
 class Family():
   def __init__(self, name):
@@ -41,7 +38,8 @@ class Family():
       "ruff": 0,
       "sigma shirt": 0,
       "tight ahh joggers": 0,
-      "gravel": 0
+      "gravel": 0,
+      "scum spray": 0,
     }
     self.equipped = {
       "shoes": "none",

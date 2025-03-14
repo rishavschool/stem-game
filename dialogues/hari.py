@@ -6,8 +6,8 @@ hari_dialogue = {
   "responses": {
     "Stay broke Hari": {
       "audio": "imgonnarage.mp3",
-      "dialogue": "I'm gonna rage.",
-      "responses": "END1"
+      "dialogue": f"I'm gonna {TerminalColors.RED}rage{TerminalColors.RESET}!",
+      "responses": "END3"
     },
     "I don't have any money, sorry great guy": {
       "audio": "gimmelater.mp3",

@@ -6,7 +6,7 @@ from enemies import Rishi
 
 def handle_result(result, user):
   if result == "END1":
-    pass
+    user.inventory["scum spray"] += 1
   elif result == "END2":
     init_battle(user, Rishi())
 

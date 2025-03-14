@@ -52,13 +52,33 @@ def create_enemy_name_str(enemy):
   return f"ENEMY: {TerminalColors.BOLD}{TerminalColors.RED}{TerminalColors.UNDERLINE}{enemy.name}{TerminalColors.RESET}"
 
 
+
+def get_health_color(health_percent):
+  if health_percent >= 70:
+    return TerminalColors.BRIGHT_GREEN
+  elif health_percent >= 30:
+    return TerminalColors.YELLOW
+  else:
+    return TerminalColors.RED
+
+def create_health_str(current_health, max_health):
+  progress = current_health / max_health
+  bar_length = 40
+  
+  filled_length = int(bar_length * progress)
+  
+  bar = f"{get_health_color(progress * 100)}{TerminalColors.BOLD}" + '#' * filled_length + f"{TerminalColors.RESET}" + '-' * (bar_length - filled_length)
+  health_str = f"[{bar}] {current_health}/{max_health} HP ({int(progress * 100)}%)"
+
+  print(f"{TerminalColors.BOLD}Health:{TerminalColors.RESET} {health_str}")
+
 def display_stats(user, enemy, user_health, enemy_health):
   print(battle_text)
   print(create_user_name_str(user))
-  print(f"{TerminalColors.BOLD}Health:{TerminalColors.RESET} {TerminalColors.BRIGHT_GREEN}{user_health}/{user.max_health}{TerminalColors.RESET}")
+  print(f"{TerminalColors.BOLD}Health:{TerminalColors.RESET} {create_health_str(user_health, user.max_health)}")
   print("")
   print(create_enemy_name_str(enemy))
-  print(f"{TerminalColors.BOLD}Health:{TerminalColors.RESET} {TerminalColors.BRIGHT_GREEN}{enemy_health}/{enemy.max_health}{TerminalColors.RESET}")
+  print(f"{TerminalColors.BOLD}Health:{TerminalColors.RESET} {create_health_str(enemy_health, enemy.max_health)}")
   print("")
 
 

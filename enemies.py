@@ -80,3 +80,18 @@ class TPod(Enemy):
       f"{TerminalColors.RED}DelCo{TerminalColors.RESET}": 20,
       f"{TerminalColors.PINK}Smiley{TerminalColors.RESET}": 45
     }
+
+class Hari(Enemy):
+  def __init__(self):
+    self.name = "Hari"
+    self.max_health = 200
+    self.strength = 20
+    self.charisma = 30
+    self.xp = 150
+    self.abilities = {
+      f"{TerminalColors.RED}RAGE{TerminalColors.RESET}": 20,
+      f"{TerminalColors.CYAN}Seep{TerminalColors.RESET}": 15,
+      f"{TerminalColors.YELLOW}Glaze{TerminalColors.RESET}": 12,
+      f"{TerminalColors.GREEN}Yo can I have some money{TerminalColors.RESET}": 15,
+      f"{TerminalColors.MAGENTA}Polyester whip{TerminalColors.RESET}": 10
+    }

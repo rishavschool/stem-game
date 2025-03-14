@@ -1,15 +1,16 @@
 from colors import TerminalColors
 
-#name: damage
 throwables = {
   "mayo": 15,
   "sugar": 5,
   "sweetener": 10,
-  "soda": 25
+  "soda": 25,
+  "scum spray": 20,
 }
 
 throwable_colors = {
   "soda": TerminalColors.ORANGE,
   "sweetener": TerminalColors.CYAN,
-  "mayo": TerminalColors.YELLOW
+  "mayo": TerminalColors.YELLOW,
+  "scum spray": TerminalColors.BROWN,
 }
